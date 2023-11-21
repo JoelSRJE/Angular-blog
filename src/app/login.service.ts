@@ -1,9 +1,18 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
+  isAdmin: boolean = true;
 
-  constructor() { }
+  toggleAdmin() {
+    this.isAdmin = !this.isAdmin;
+  }
+
+  isAdminUser(): boolean {
+    return this.isAdmin;
+  }
+
+  constructor() {}
 }
