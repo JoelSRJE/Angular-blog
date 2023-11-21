@@ -11,6 +11,7 @@ export class NavbarComponent {
 
   constructor(public LoginService: LoginService) {}
 
+  // Togglar views mellan user och admin
   toggleAdminView() {
     this.LoginService.toggleAdmin();
   }

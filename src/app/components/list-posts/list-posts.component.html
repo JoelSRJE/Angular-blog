@@ -1,1 +1,48 @@
-<p>list-posts works!</p>
+<div class="list-section">
+  <h2 class="list-title">Blog Posts</h2>
+  <div class="list-container">
+    <div class="blog-post" *ngFor="let post of localPosts">
+      <div class="blog-post-img-container">
+        <a [routerLink]="['/View', post.id]">
+          <img
+            class="blog-post-img"
+            src="{{ post.thumbnailUrl }}"
+            alt="Thumbnail"
+          />
+        </a>
+      </div>
+
+      <div class="opinion-container">
+        <div class="opinion-field">
+          <button (click)="increaseLikes(post)" class="opinion-btn">
+            <i-feather name="arrow-up"></i-feather>
+          </button>
+          Likes: {{ post.likes }}
+          <button (click)="decreaseLikes(post)" class="opinion-btn">
+            <i-feather name="arrow-down"></i-feather>
+          </button>
+        </div>
+
+        <div class="opinion-field">
+          <button (click)="increaseDislikes(post)" class="opinion-btn">
+            <i-feather name="arrow-up"></i-feather>
+          </button>
+          Dislikes: {{ post.dislikes }}
+          <button (click)="decreaseDislikes(post)" class="opinion-btn">
+            <i-feather name="arrow-down"></i-feather>
+          </button>
+        </div>
+
+        <div>
+          <span class="post-comments">
+            Comments: {{ post.comments.length }}
+          </span>
+        </div>
+      </div>
+
+      <a [routerLink]="['/View', post.id]">
+        <h3 class="blog-post-title">{{ post.title }}</h3>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+.list-title {
+  display: flex;
+  justify-content: center;
+}
+
+.list-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.blog-post {
+  background-color: rgba(240, 240, 240, 0.3);
+  padding: 1em;
+  border-radius: 20px;
+  min-width: 50em;
+  box-shadow: 5px 5px 5px 5px rgb(223, 223, 223);
+  border: 2px solid silver;
+}
+
+.blog-post-title {
+  font-size: 1.2em;
+  width: auto;
+  text-align: center;
+  color: black;
+}
+
+.list-section a {
+  text-decoration: none;
+}
+
+.blog-post-img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.blog-post-img {
+  border-radius: 10px;
+  width: 50em;
+  height: 31em;
+}
+
+.opinion-field {
+  display: flex;
+  justify-content: center;
+}

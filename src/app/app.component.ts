@@ -54,7 +54,7 @@ export class AppComponent {
         value: '#3498db',
       },
       links: {
-        color: '#73b6e2',
+        color: '#ff9800',
         distance: 150,
         enable: true,
         opacity: 0.6,
