@@ -1,1 +1,44 @@
-<p>create-post works!</p>
+<div class="create-wrapper">
+  <button routerLink="/" class="return-btn">
+    <i-feather name="arrow-left-circle" class="return-icon"></i-feather>
+  </button>
+
+  <div class="form-wrapper">
+    <form (ngSubmit)="createPost()" class="form-container">
+      <h2 class="form-title">New Post</h2>
+      <div class="form-field">
+        <label for="title">Article Title</label>
+        <input
+          type="text"
+          name="title"
+          [(ngModel)]="newPost.title"
+          placeholder="The headline for your article.."
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="thumbnailUrl">Article Image</label>
+        <input
+          type="text"
+          name="thumbnailUrl"
+          [(ngModel)]="newPost.thumbnailUrl"
+          placeholder="Link an URL here.."
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="body">Article Content</label>
+        <textarea
+          type="text"
+          name="body"
+          [(ngModel)]="newPost.body"
+          placeholder="Write the entire article here.."
+        ></textarea>
+      </div>
+
+      <div class="create-btn">
+        <button type="submit">Post Article</button>
+      </div>
+    </form>
+  </div>
+</div>

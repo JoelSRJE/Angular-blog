@@ -1,0 +1,29 @@
+.footer-section {
+  margin-top: 3em;
+  height: 3em;
+  width: 100%;
+  background-color: rgb(18, 21, 26);
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* Icon styling */
+.f-icons {
+  margin-top: 0.7em;
+  cursor: pointer;
+  color: #fff;
+}
+
+.f-icons:hover {
+  color: rgba(220, 20, 60, 0.7);
+}
+
+.footer-middle {
+  position: relative;
+  top: 1em;
+}

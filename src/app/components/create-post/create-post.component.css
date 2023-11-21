@@ -1,0 +1,61 @@
+.create-wrapper {
+  margin-top: 15em;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+}
+
+.form-title {
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 40em;
+  height: 40em;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  height: 3em;
+  width: auto;
+  padding: 1em;
+}
+
+.form-field label {
+  position: relative;
+  font-size: 1.2em;
+  left: 10%;
+}
+
+.form-field input {
+  height: 2em;
+  width: 80%;
+  align-self: center;
+}
+
+.form-field textarea {
+  align-self: center;
+  resize: none;
+  min-height: 18em;
+  width: 80%;
+}
+
+.create-btn {
+  position: relative;
+  bottom: -250px;
+  left: 45%;
+}
+
+.create-btn button {
+  height: 2em;
+  width: auto;
+  text-align: center;
+}
