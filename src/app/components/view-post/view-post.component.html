@@ -1,0 +1,118 @@
+<section class="view-post-section" *ngIf="post">
+  <button routerLink="/" class="return-btn">
+    <i-feather name="arrow-left-circle" class="return-icon"></i-feather>
+  </button>
+
+  <div class="post-timestamp">
+    <span>Created: {{ post.creationDate | date : "dd MMM yyyy H:M " }}</span>
+  </div>
+
+  <div>
+    <div class="post-img">
+      <img
+        class="blog-post-img"
+        src="{{ post.thumbnailUrl }}"
+        alt="Thumbnail"
+      />
+    </div>
+
+    <div class="opinion-wrapper">
+      <div class="opinion-container">
+        <button (click)="increaseLikes()" class="opinion-btn">
+          <i-feather name="arrow-up"></i-feather>
+        </button>
+        Likes: {{ post.likes }}
+        <button (click)="decreaseLikes()" class="opinion-btn">
+          <i-feather name="arrow-down"></i-feather>
+        </button>
+      </div>
+
+      <div class="opinion-container">
+        <button (click)="increaseDislikes()" class="opinion-btn">
+          <i-feather name="arrow-up"></i-feather>
+        </button>
+        Dislikes: {{ post.dislikes }}
+        <button (click)="decreaseDislikes()" class="opinion-btn">
+          <i-feather name="arrow-down"></i-feather>
+        </button>
+      </div>
+
+      <div>
+        <span>Comments: {{ post.comments.length }}</span>
+      </div>
+    </div>
+
+    <div class="post-title">
+      <h2>{{ post.title }}</h2>
+    </div>
+
+    <div class="post-text" *ngIf="!editing">
+      <span>{{ post.body }}</span>
+    </div>
+
+    <div class="post-text" *ngIf="editing">
+      <form #editForm="ngForm" (ngSubmit)="saveEdit()">
+        <textarea
+          class="edit-text"
+          id="postBody"
+          [(ngModel)]="post.body"
+          name="postBody"
+          required
+        ></textarea>
+
+        <div class="editing-post-btns">
+          <button class="while-edit" type="submit">Save Edit</button>
+          <button class="while-cancel" type="button" (click)="cancelEdit()">
+            Cancel Edit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div *ngIf="LoginService.isAdminUser()" class="post-btn-container">
+      <button *ngIf="!editing" class="edit-post-btn" (click)="editPost()">
+        Edit Post
+      </button>
+      <button class="delete-post-btn" (click)="deletePost()">
+        Delete Post
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="comment-section">
+  <div class="form-container">
+    <form (ngSubmit)="addComment()">
+      <label class="form-title" for="newComment">Comment:</label>
+      <textarea
+        class="form-comment-area"
+        id="postComment"
+        [(ngModel)]="postComment"
+        name="postComment"
+      ></textarea>
+      <button type="submit" class="form-btn">Submit</button>
+    </form>
+  </div>
+
+  <!-- cc står för created comment -->
+  <div class="comments">
+    <ul class="comments-list">
+      <div class="cc-container" *ngFor="let comment of post?.comments">
+        <div>
+          <span class="cc-title"
+            >{{ comment.username }}:
+            <button
+              *ngIf="LoginService.isAdminUser()"
+              (click)="deleteComment(comment)"
+              class="delete-btn"
+            >
+              X
+            </button></span
+          >
+
+          <span class="cc-textarea">{{ comment.text }}</span>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>

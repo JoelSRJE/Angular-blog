@@ -1,0 +1,247 @@
+.view-post-section {
+  margin-top: 8em;
+  padding: 1em;
+}
+
+.post-timestamp {
+  display: flex;
+  justify-content: center;
+}
+
+.post-timestamp span {
+  position: relative;
+  top: 64px;
+  left: -280px;
+}
+
+.post-img {
+  display: flex;
+  justify-content: center;
+}
+
+.post-img img {
+  border-radius: 20px;
+  scale: 0.7;
+  margin-top: -3em;
+}
+
+.opinion-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  gap: 1em;
+  margin-top: -6.5em;
+}
+
+.post-title {
+  display: flex;
+  justify-content: center;
+}
+
+.post-text {
+  display: flex;
+  justify-content: center;
+}
+
+.post-text span {
+  text-align: center;
+  min-height: 10em;
+  max-width: 50em;
+  height: auto;
+  letter-spacing: 2px;
+  background: #fff;
+}
+
+.post-btn-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  top: 30em;
+  right: 20%;
+  gap: 1em;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 4em;
+  width: 6em;
+  padding: 2em;
+}
+
+.edit-post-btn {
+  height: 2em;
+  width: 7em;
+  padding: 0.3em;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 0, 1);
+  background: none;
+  cursor: pointer;
+}
+
+.delete-post-btn {
+  height: 2em;
+  width: 7em;
+  padding: 0.3em;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid rgba(220, 20, 60, 1);
+  background: none;
+  cursor: pointer;
+}
+
+.edit-post-btn:hover {
+  background-color: rgba(255, 255, 0, 0.7);
+  border-radius: 10px;
+}
+
+.delete-post-btn:hover {
+  background-color: rgba(220, 20, 60, 0.7);
+  border-radius: 10px;
+}
+
+/* While in edit mode styling */
+
+.edit-text {
+  height: 60em;
+  width: 50em;
+  border: 2px solid black;
+  resize: none;
+  letter-spacing: 2px;
+}
+
+.editing-post-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.5em;
+  height: 1.8em;
+  width: 30em;
+}
+
+.while-edit,
+.while-cancel {
+  background: none;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.while-edit:hover {
+  background: rgba(255, 255, 0, 0.7);
+  border: transparent;
+}
+
+.while-cancel:hover {
+  background: rgba(220, 20, 60, 0.7);
+}
+/* Comment Section */
+
+/* Create a comment */
+
+.comment-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8em;
+  height: 7em;
+  width: 20em;
+  margin-bottom: 1em;
+  background-color: rgba(240, 240, 240, 0.4);
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-title {
+  align-self: flex-start;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.form-comment-area {
+  display: flex;
+  align-self: center;
+  margin-top: 0.5em;
+  resize: none;
+  border: none;
+  border-radius: 10px;
+  height: 3em;
+  width: 100%;
+  font-size: 1.1em;
+  padding: 0.4em;
+}
+
+.form-btn {
+  margin-top: 0.5em;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+  background: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.form-btn:hover {
+  border-bottom: 2px solid #3498db;
+  transform: scale(1.1);
+}
+
+/* The Comments */
+
+.comments {
+  width: 30em;
+  height: auto;
+  padding: 1em;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cc-container {
+  background-color: rgba(240, 240, 240, 0.5);
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.cc-title {
+  display: flex;
+  border-bottom: 2px solid darkgray;
+  width: 21%;
+}
+
+.delete-btn {
+  position: relative;
+  right: -300px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-color: #dddddd;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.delete-btn:hover {
+  background-color: crimson;
+}
+
+.cc-textarea {
+  display: flex;
+  margin-top: 0.3em;
+}
