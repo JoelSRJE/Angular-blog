@@ -27,7 +27,6 @@ import { AboutComponent } from './views/about/about.component';
 import { ListPostsComponent } from './components/list-posts/list-posts.component';
 import { CreatePostComponent } from './components/create-post/create-post.component';
 import { ViewPostComponent } from './components/view-post/view-post.component';
-import { PostComponent } from './post/post.component';
 
 const icons = {
   Github,
@@ -49,7 +48,6 @@ const icons = {
     ListPostsComponent,
     CreatePostComponent,
     ViewPostComponent,
-    PostComponent,
   ],
   imports: [
     BrowserModule,
