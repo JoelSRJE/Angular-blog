@@ -1,0 +1,156 @@
+.about-wrapper {
+  margin-top: 14em;
+  max-width: 50em;
+  margin: 14em auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid silver;
+  box-shadow: 5px 5px 5px rgb(199, 199, 199);
+}
+
+/* About-side Sektion */
+.as-object-one {
+  position: absolute;
+  left: 250px;
+  top: 22em;
+}
+
+.as-object-two {
+  position: absolute;
+  right: 200px;
+  bottom: 100px;
+  overflow: hidden;
+  height: 18em;
+  width: 30em;
+  padding: 1em;
+}
+
+.code-container {
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+.dt-one {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  color: rgb(19, 161, 0);
+  border-right: 2px solid black; /* Styling för "cursorn" */
+  white-space: nowrap; /* Förhindra att texten bryts ned */
+  animation: typeAndDelete 6s steps(28) infinite, blink-caret 0.75s infinite;
+}
+
+.dt-two {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  color: rgb(161, 161, 0);
+  border-right: 2px solid orange; /* Styling för "cursorn" */
+  white-space: nowrap; /* Förhindra att texten bryts ned */
+  animation: typeAndDelete2 6s steps(40) infinite, blink-caret 0.75s infinite;
+  animation-delay: 5s;
+}
+
+.dt-three {
+  display: inline-block;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
+.dt-three::after {
+  content: attr(data-content);
+  display: inline-block;
+  white-space: pre-wrap;
+  overflow: hidden;
+  animation: typeAndDelete 6s steps(170) infinite, blink-caret 0.75s infinite;
+}
+
+/* About section */
+.about-container {
+  padding: 1em;
+  border-radius: 10px;
+  opacity: 0.9;
+  background-color: #fff;
+}
+
+.at-container {
+  display: flex;
+  justify-content: center;
+}
+
+h2,
+h3 {
+  text-align: center;
+  color: #333;
+  border-bottom: 2px solid #3498db;
+}
+
+p,
+li {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.contact-btn {
+  position: relative;
+  left: 350px;
+  background: none;
+  border: 1px solid #3498db;
+  height: 2em;
+  width: 5em;
+  transition: all 0.3s ease-in;
+}
+
+.contact-btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.contact-btn:hover {
+  background-color: #3498db;
+
+  transform: scale(1.1);
+}
+
+/* animations */
+@keyframes typeAndDelete {
+  0%,
+  100% {
+    width: 0;
+  }
+  14%,
+  28% {
+    width: 24%;
+  }
+}
+
+@keyframes typeAndDelete2 {
+  0%,
+  100% {
+    width: 0;
+  }
+  14%,
+  28% {
+    width: 21%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}

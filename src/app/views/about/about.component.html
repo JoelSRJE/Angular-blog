@@ -1,1 +1,66 @@
-<p>about works!</p>
+<section class="about-section">
+  <button routerLink="/" class="return-btn">
+    <i-feather name="arrow-left-circle" class="return-icon"></i-feather>
+  </button>
+
+  <!--  as = förkortning av about-side
+          dt = förkortning av dynamic-text  -->
+  <div>
+    <div class="as-object-one">
+      <pre>{{ snippet1 }}<span class="dt-one">this.post?.id;</span>{{ snippet2 }}<span class="dt-two">localService</span>{{ snippet3 }}</pre>
+    </div>
+  </div>
+
+  <div class="as-object-two">
+    <pre><span class="dt-three" id="animatedText"></span></pre>
+  </div>
+
+  <div class="about-wrapper">
+    <div class="about-container">
+      <!--AI genererad text-->
+
+      <!--at = förkortning av about-title -->
+      <div class="at-container">
+        <h2>About Our Tech Blog</h2>
+      </div>
+
+      <p>
+        Welcome to our tech blog, where we delve into the exciting world of
+        frontend programming. Whether you're a seasoned developer or just
+        starting out, our blog aims to provide valuable insights, tips, and
+        discussions on various aspects of frontend development.
+      </p>
+
+      <div class="at-container">
+        <h3>What We Cover</h3>
+      </div>
+
+      <ul *ngFor="let item of list">
+        <li>{{ item }}</li>
+      </ul>
+
+      <div class="at-container">
+        <h3>Our Mission</h3>
+      </div>
+
+      <p>
+        Our mission is to foster a supportive community of developers, share
+        knowledge, and inspire creativity in the ever-evolving field of frontend
+        programming.
+      </p>
+
+      <div class="at-container">
+        <h3>Connect with Us</h3>
+      </div>
+
+      <p>
+        We encourage you to engage with us by commenting on posts, sharing your
+        thoughts, and connecting on social media. Let's learn and grow together!
+      </p>
+
+      <button class="contact-btn">
+        <a routerLink="/Contact">Contact</a>
+      </button>
+    </div>
+  </div>
+</section>
