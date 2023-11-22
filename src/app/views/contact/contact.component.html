@@ -1,1 +1,63 @@
-<p>contact works!</p>
+<section class="contact-section">
+  <button routerLink="/" class="return-btn">
+    <i-feather name="arrow-left-circle" class="return-icon"></i-feather>
+  </button>
+
+  <div class="contact">
+    <span>Hi, please fill out the form and we'll<br /></span>
+    <span> get back to you as soon as possible!</span>
+  </div>
+
+  <div class="contact-wrapper">
+    <form (ngSubmit)="submitToConsole()" class="contact-form">
+      <h1>Contact Us</h1>
+      <div class="contact-field">
+        <input
+          type="text"
+          required
+          [(ngModel)]="formData.firstName"
+          name="firstName"
+        />
+        <span>First Name</span>
+      </div>
+
+      <div class="contact-field">
+        <input
+          type="text"
+          required
+          [(ngModel)]="formData.lastName"
+          name="lastName"
+        />
+        <span>Last name</span>
+      </div>
+
+      <div class="contact-field">
+        <input type="text" required [(ngModel)]="formData.email" name="email" />
+        <span>Your Email</span>
+      </div>
+
+      <div class="contact-field">
+        <input
+          type="text"
+          required
+          [(ngModel)]="formData.subject"
+          name="subject"
+        />
+        <span>Subject</span>
+      </div>
+
+      <div class="contact-field">
+        <textarea
+          required
+          [(ngModel)]="formData.comment"
+          name="comment"
+        ></textarea>
+        <span>Comment</span>
+      </div>
+
+      <div class="form-submit-btn">
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>

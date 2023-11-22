@@ -1,0 +1,133 @@
+.contact-section {
+  margin-top: 8em;
+}
+
+/* darkmode: #1d2b3a */
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  min-height: 83vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: 24em;
+  padding: 1em;
+  flex-wrap: wrap;
+  border: 1px solid #3498db;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.contact-form h1 {
+  color: rgba(52, 152, 219, 0.6);
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  left: 10px;
+  top: 10px;
+  width: 100%;
+}
+
+.contact-field input {
+  width: 17em;
+  padding: 10px;
+  border: 1px solid rgba(52, 152, 219, 0.6);
+  border-radius: 5px;
+  outline: none;
+  color: black;
+  font-size: 1em;
+}
+
+.contact-field span {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  pointer-events: none;
+  font-size: 0.8em;
+  color: rgba(52, 152, 219, 0.6);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.contact-field input:valid + span,
+.contact-field input:focus + span {
+  color: #00dfc4;
+  top: -5px;
+  font-size: 0.65em;
+  padding: 0 10px;
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  background: #fff;
+  letter-spacing: 2px;
+}
+
+.contact-field textarea {
+  display: flex;
+  width: 17em;
+  height: 120px;
+  padding: 10px;
+  border: 1px solid rgba(52, 152, 219, 0.6);
+  border-radius: 5px;
+  outline: none;
+  color: black;
+  font-size: 1em;
+  resize: none;
+}
+
+.contact-field textarea:valid + span,
+.contact-field textarea:focus + span {
+  color: #00dfc4;
+  transform: translateX(10px) translateY(-15px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  border-left: 1px solid #00dfc4;
+  border-right: 1px solid #00dfc4;
+  background: #fff;
+  letter-spacing: 2px;
+}
+
+.form-submit-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.submit-btn {
+  padding: 10px;
+  border: 1px solid rgba(52, 152, 219, 0.6);
+  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.4s ease-in;
+}
+
+.submit-btn:hover {
+  background-color: #3498db;
+  transform: scale(1.1);
+}
+
+.contact {
+  position: absolute;
+  top: 25em;
+  left: 19em;
+  height: 2em;
+  width: auto;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #3498db;
+}
