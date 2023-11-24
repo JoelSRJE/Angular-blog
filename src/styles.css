@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@import "ngx-toastr/toastr";
 
 * {
   font-family: "Courier New", Courier, monospace;
@@ -7,4 +7,44 @@
 body {
   background-color: #fff;
   scroll-behavior: smooth;
+}
+
+.return-btn {
+  position: absolute;
+  top: 17em;
+  left: 30em;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.return-icon {
+  height: 2em;
+  width: 2em;
+  transition: all ease 0.6s;
+  cursor: pointer;
+}
+
+.return-icon:hover {
+  transform: scale(1.2);
+}
+
+.opinion-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  gap: 1em;
+}
+
+.opinion-btn {
+  background: none;
+  border: none;
+  scale: 0.8;
+  cursor: pointer;
+}
+
+.opinion-btn:hover {
+  scale: 1;
+  color: rgba(220, 20, 60, 0.7);
 }

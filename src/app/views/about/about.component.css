@@ -1,6 +1,6 @@
 .about-wrapper {
   margin-top: 14em;
-  max-width: 50em;
+  max-width: 40em;
   margin: 14em auto;
   padding: 20px;
   border-radius: 10px;
@@ -12,8 +12,9 @@
 /* About-side Sektion */
 .as-object-one {
   position: absolute;
-  left: 250px;
+  left: 200px;
   top: 22em;
+  font-size: 0.9em;
 }
 
 .as-object-two {
@@ -152,5 +153,23 @@ li {
   }
   50% {
     border-color: black;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .about-wrapper {
+    width: 30em;
+  }
+
+  .as-object-one {
+    left: 70px;
+  }
+
+  .as-object-two {
+    right: 100px;
+  }
+
+  .contact-btn {
+    left: 190px;
   }
 }

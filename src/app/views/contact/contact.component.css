@@ -121,13 +121,21 @@
   transform: scale(1.1);
 }
 
-.contact {
+.contact-text {
   position: absolute;
-  top: 25em;
-  left: 19em;
+  top: 20em;
+  left: 10em;
   height: 2em;
-  width: auto;
+  width: 15em;
   font-size: 1.5em;
   font-weight: bold;
   color: #3498db;
+}
+
+@media screen and (min-width: 2000px) {
+  .contact-text {
+    top: 23em;
+    left: 25em;
+    width: 15em;
+  }
 }
